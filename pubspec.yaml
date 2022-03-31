@@ -58,10 +58,16 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets\sakura.jpg
+    - assets\BlackClover.jpg
+    - assets\JujutsuKaisen.jpg
     - assets\Kaguya.jpg
     - assets\KawaiiDake.jpg
     - assets\OnePiece.jpg
+    - assets\Asta.jpg
+    - assets\Jujutsu.png
+    - assets\Konosuba.jpg
+    - assets\LuffyIMG.jpg
+    - assets\Tanjiroo.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

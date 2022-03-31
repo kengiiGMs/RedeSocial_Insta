@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rede_social1/categorias.dart';
 import 'Carousel.dart';
 import 'ImagensInicio.dart';
 import 'Storys.dart';
+import 'categorias.dart';
 
 class AppWidget extends StatelessWidget {
   @override
@@ -95,9 +97,22 @@ class HomePageState extends State<Home_page> {
         child: ListView(
           padding: const EdgeInsets.all(8),
           children: <Widget>[
-            Storys(),
-            ImagensInicio(),
             Carrosel(),
+            Center(
+              child: Container(
+                padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                child: Text("Categorias"),
+              ),
+            ),
+            Categorias(),
+            ImagensInicio(),
+            Center(
+              child: Container(
+                padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
+                child: Text("Perfils da Semana"),
+              ),
+            ),
+            Storys(),
             /* Fim  */
           ],
         ),
@@ -129,7 +144,7 @@ class HomePageState extends State<Home_page> {
           onTap: _onItemTapped,
         ),
       ),
-      /* Fim AppbarBottom */
+      /* FimAppbarBottom */
     );
   }
 

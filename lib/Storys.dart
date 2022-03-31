@@ -12,7 +12,7 @@ class _StorysState extends State<Storys> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(0, 35, 0, 0),
+      padding: EdgeInsets.fromLTRB(0, 18, 0, 15),
       child: (Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

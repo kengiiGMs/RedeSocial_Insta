@@ -21,6 +21,9 @@ class _CarroselState extends State<Carrosel> {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Padding(
+          padding: EdgeInsets.fromLTRB(0, 60, 0, 0),
+        ),
         CarouselSlider(
           items: [
             Container(

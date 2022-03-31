@@ -18,10 +18,8 @@ class _ImagensInicioState extends State<ImagensInicio> {
           padding: EdgeInsets.fromLTRB(60, 30, 60, 0),
           width: 600,
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(30.0),
-            child: Image.network(
-                "https://i0.wp.com/wallpaperup.com/uploads/wallpapers/2014/02/25/274635/999ee1b9a8fdb43b069032d39076f462-700.jpg"),
-          ),
+              borderRadius: BorderRadius.circular(30.0),
+              child: Image.asset('BlackClover.jpg')),
         ),
         Container(
           child: Row(
@@ -70,7 +68,7 @@ class _ImagensInicioState extends State<ImagensInicio> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(30.0),
             child: Image(
-              image: AssetImage('sakura.jpg'),
+              image: AssetImage('JujutsuKaisen.jpg'),
             ),
           ),
         ),
