@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rede_social1/categorias.dart';
+import 'package:rede_social1/login.dart';
 import 'Carousel.dart';
 import 'ImagensInicio.dart';
 import 'Storys.dart';
@@ -13,7 +14,7 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter',
       theme: ThemeData(brightness: Brightness.dark, primarySwatch: Colors.blue),
-      home: Home_page(),
+      home: LoginPage(),
     );
   }
 }
@@ -54,8 +55,8 @@ class HomePageState extends State<Home_page> {
                 child: Image.network(
                     'https://64.media.tumblr.com/a4b20acf9604445798b00c23ca8edddf/7bc9d88ab8bc0769-86/s400x600/67cde2e70a64895dea8d90fcb31a3ffdbc787731.jpg'),
               ),
-              accountName: Text('KengiiGMs'),
-              accountEmail: Text('KengiiGMs@hotmail.com'),
+              accountName: Text('Mahki'),
+              accountEmail: Text('Mahki@hotmail.com'),
               decoration: BoxDecoration(
                 image: DecorationImage(
                     image: NetworkImage(
