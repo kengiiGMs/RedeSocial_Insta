@@ -15,7 +15,7 @@ class _ImagensInicioState extends State<ImagensInicio> {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.fromLTRB(60, 30, 60, 0),
+          padding: EdgeInsets.fromLTRB(60, 20, 60, 0),
           width: 600,
           child: ClipRRect(
               borderRadius: BorderRadius.circular(30.0),

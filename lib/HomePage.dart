@@ -14,7 +14,11 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter',
       theme: ThemeData(brightness: Brightness.dark, primarySwatch: Colors.blue),
-      home: LoginPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LoginPage(),
+        '/home': (context) => Home_page(),
+      },
     );
   }
 }
@@ -67,14 +71,19 @@ class HomePageState extends State<Home_page> {
             ListTile(
               leading: Icon(Icons.account_box_outlined),
               title: Text('Ver Perfil'),
+              onTap: () {},
             ),
             ListTile(
               leading: Icon(Icons.manage_accounts_outlined),
               title: Text('Configurações'),
+              onTap: () {},
             ),
             ListTile(
               leading: Icon(Icons.backspace_outlined),
               title: Text('Sair'),
+              onTap: () {
+                Navigator.of(context).pushReplacementNamed('/');
+              },
             ),
           ],
         ),
@@ -102,15 +111,32 @@ class HomePageState extends State<Home_page> {
             Center(
               child: Container(
                 padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-                child: Text("Categorias"),
+                child: Text(
+                  "Categorias",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                  textAlign: TextAlign.center,
+                ),
               ),
             ),
             Categorias(),
+            Center(
+              child: Container(
+                padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                child: Text(
+                  "Imagens mais curtidas",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+            ),
             ImagensInicio(),
             Center(
               child: Container(
                 padding: EdgeInsets.fromLTRB(0, 30, 0, 0),
-                child: Text("Perfils da Semana"),
+                child: Text(
+                  "Perfils da Semana",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+                ),
               ),
             ),
             Storys(),

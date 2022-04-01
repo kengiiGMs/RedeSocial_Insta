@@ -36,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
                   child: Icon(
                     Icons.account_circle,
                     size: 118,
-                    color: Color.fromARGB(255, 53, 0, 62),
+                    color: Colors.blue,
                   ),
                 ),
                 SizedBox(
@@ -52,7 +52,7 @@ class _LoginPageState extends State<LoginPage> {
                   decoration: InputDecoration(
                     labelText: 'Email',
                     labelStyle: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontWeight: FontWeight.w400,
                       fontSize: 20,
                     ),
@@ -61,7 +61,6 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 SizedBox(height: 10),
                 /* FimUsuario */
-
                 /* InicioSenha */
                 TextField(
                   onChanged: (text) {
@@ -71,13 +70,15 @@ class _LoginPageState extends State<LoginPage> {
                   decoration: InputDecoration(
                     labelText: 'Password',
                     labelStyle: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontWeight: FontWeight.w400,
                       fontSize: 20,
                     ),
                     border: OutlineInputBorder(),
                   ),
                 ),
+                /* FimSenha */
+                /* RecuperarSenha */
                 Container(
                   height: 48,
                   alignment: Alignment.centerRight,
@@ -86,29 +87,71 @@ class _LoginPageState extends State<LoginPage> {
                     textAlign: TextAlign.right,
                   ),
                 ),
-                Container(
-                  width: 700,
-                  height: 40,
-                  child: RaisedButton(
-                    onPressed: () {
-                      if (email == "mahki@hotmail.com" && password == "1234") {}
-                    },
-                    child: Text("Entrar"),
-                  ),
+                /* FimRecuperarSenha */
+                /* InicioBotao */
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                      child: Text(
+                        "Entrar".toUpperCase(),
+                        style: TextStyle(fontSize: 17),
+                      ),
+                      style: ButtonStyle(
+                        padding: MaterialStateProperty.all<EdgeInsets>(
+                          EdgeInsets.fromLTRB(160, 20, 160, 20),
+                        ),
+                        foregroundColor:
+                            MaterialStateProperty.all<Color>(Colors.blue),
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(18.0),
+                            side: BorderSide(color: Colors.blue),
+                          ),
+                        ),
+                      ),
+                      onPressed: () {
+                        if (email == "mahki@hotmail.com" &&
+                            password == "1234") {
+                          Navigator.of(context).pushReplacementNamed('/home');
+                        } else {
+                          Navigator.of(context).pushReplacementNamed('/');
+                        }
+                      },
+                    ),
+                  ],
                 ),
+                /* FimBotao */
                 SizedBox(
                   height: 10,
                 ),
+                /* IniciBotaoFace */
                 Container(
-                    height: 40,
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Cadastrar",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )),
-                /* FimSenha */
+                  height: 45,
+                  width: 388,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 42, 71, 133),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(18),
+                    ),
+                  ),
+                  child: SizedBox.expand(
+                    child: Icon(Icons.facebook),
+                  ),
+                ),
+                /* FimBotaoFace */
+                Container(
+                  height: 40,
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Cadastrar",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
